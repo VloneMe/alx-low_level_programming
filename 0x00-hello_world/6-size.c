@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - entry point progran
- * Return 0 (success)
- */
+/**
+* main - entry point progran to out types of data
+* Return: 0 (success)
+*/
 
 int main(void)
 {
@@ -12,5 +12,6 @@ int main(void)
 	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(float));
+
 	return (0);
 }
