@@ -19,7 +19,7 @@ int main(void)
 					putchar(A);
 					putchar(B);
 
-					if (A == '8' && p == '9')
+					if (A == '8' && B == '9')
 						continue;
 					putchar(',');
 					putchar(' ');
