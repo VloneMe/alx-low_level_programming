@@ -5,7 +5,7 @@
 /**
  * main - main entry point of a program
  *
- * Returns: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
