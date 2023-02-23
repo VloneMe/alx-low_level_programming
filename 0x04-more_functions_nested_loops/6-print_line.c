@@ -11,12 +11,19 @@
 
 void print_line(int n)
 {
-	int m;
-
-	if (m > 0)
+	if (n <= 0)
 	{
-		for (m = 0; m < n; m++)
+		_putchar('\n');
+	} else
+	{
+		int m;
+
+		for (m = 1; m <= n; i++)
+		{
 			_putchar('_');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
+
 }
+
