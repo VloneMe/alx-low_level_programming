@@ -3,22 +3,24 @@
 /**
  * more_numbers - prints more numbers
  *
- * Return: 0
+ * Return: 0 Always
  *
  */
 
 void more_numbers(void)
 {
-	int n, m;
+	int i, j;
 
-	for (n = 1; n < 10; n++)
+	for (i = 1; i <= 10; i++)
 	{
-		for (m = 0; m <= 14; m++)
+		for (j = 0; j <= 14; j++)
 		{
-			if (m >= 10)
-				_putchar(1);
-			_putchar(m % 10 + '0');
+			if (j >= 10)
+				_putchar('1');
+			_putchar (j % 10 + '0');
 		}
-		_pitchar('\n');
+		_putchar('\n');
 	}
 }
+
+
