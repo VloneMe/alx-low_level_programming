@@ -9,11 +9,11 @@
 
 puts_half(char *str)
 {
-	intlen = 0;
+	int len = 0;
 
 	while (*str != '\0')
 	{
-		n++;
+		len++;
 		str++;
 	}
 
