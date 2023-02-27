@@ -6,17 +6,19 @@
  * @dest: pointe input
  * @src: pionter input
  *
- * Return: pointer to dest
+ * Return: string
  *
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	char *n = null;
-	*n = dest;
+	int len = 0;
 
-	while (*src)
-		*dest++ = *src++;
-
-	return (n);
+	while (*(src + len) != '\0')
+	{
+		*(dest + len) = *(src + len);
+		len++;
+	}
+	*(dest + len) = '\n';
+	return (dest);
 }
