@@ -11,7 +11,7 @@
 
 int _atoi(char *s)
 {
-	int s = 1;
+	int n = 1;
 
 	unsigned int t = 0;
 
@@ -20,12 +20,12 @@ int _atoi(char *s)
 	while (*s)
 	{
 		if (*s == '-')
-			s *= -1;
+			n *= -1;
 
 		if (*s >= '0' && *s <= '9')
 		{
 			null_f = 1;
-			total = t * 10 + *s - '0';
+			t = t * 10 + *s - '0';
 		}
 
 		else if (null_f)
@@ -33,7 +33,7 @@ int _atoi(char *s)
 		s++;
 	}
 
-	if (s < 0)
+	if (n < 0)
 		t = (-t);
 
 	return (t);
