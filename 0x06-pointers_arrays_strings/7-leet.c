@@ -13,18 +13,21 @@ char *leet(char *e)
 {
 	int n, m;
 
-	char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
-	     str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char str1[] = "aAeEoOtTlL";
+	char str2[] = "4433007711";
 
-	n = 0;
-	while (e[n])
+	for (n = 0; e[n] != '\0'; n++)
 	{
 		for (m = 0; m < 10; m++)
-			if (e[n] == str[m])
-				s[m] = subs[m];
-
-		n++;
+		{
+			if (e[n] == str1[m])
+			{
+				e[n] = str2[m];
+			}
+		}
 	}
 
 	return (e);
 }
+
+
