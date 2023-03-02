@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - Main entry point
- *
- * Return: 0 Always
- *
- */
-
 int main(void)
 {
 	int n;
