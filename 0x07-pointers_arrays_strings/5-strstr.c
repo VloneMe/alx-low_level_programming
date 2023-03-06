@@ -7,29 +7,27 @@
  * @haystack: an input string
  * @needle: an input string to a string haystack
  *
- * Return: 0 (success) or NULL;
+ * Return: 0 (success);
+ *
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *n = needle, *m = haystack;
-
-	while (*haystack)
+	for (; *haystack != '\0'; haystack++)
 	{
-		m = haystack;
-		needle = n;
+		char *n = haystack;
+		char *m = needle;
 
-		while (*haystack == *needle)
+		while (*n == *m  && *m != '\0')
 		{
-			haystack++;
-			needle++;
+			n++;
+			m++;
 		}
 
-		if (*needle == '\0')
+		if (*m == '\0')
 			return (haystack);
-		haystack = m + 1;
 	}
 
-	return (NULL);
+	return (0);
 
 }
