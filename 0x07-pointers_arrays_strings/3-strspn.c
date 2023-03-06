@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	int m;
 
 	while (*s)
+	{
 		for (m = 0; accept[m]; m++)
 		{
 			if (*s == accept[m])
@@ -25,6 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 				return (n);
 		}
 		s++;
+	}
 
 	return (n);
 
