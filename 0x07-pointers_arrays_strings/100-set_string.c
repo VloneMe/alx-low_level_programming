@@ -6,11 +6,11 @@
  * @s: pointer to pointer
  * @to: pointer char
  *
+ * Return: nothing
+ *
  */
 
 void set_string(char **s, char *to)
 {
-
 	*s = to;
-
 }
