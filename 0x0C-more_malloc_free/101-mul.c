@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - A main entry of the fuction checks code
+ * main -This main function Check the code
  *
  * @argc: number of arguments
  * @argv: arguments
@@ -13,28 +13,19 @@
 
 int main(int argc, char **argv)
 {
-
-	int x, y;
-	int output;
+	int num1, num2, result;
 
 	if (argc != 3)
 	{
-
 		printf("Error\n");
 		exit(98);
-
 	}
 	else
 	{
-
-		x = atoi(argv[1]);
-		y = atoi(argv[2]);
-		output = x * y;
-
-		printf("%d\n", output);
-
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		result = num1 * num2;
+		printf("%d\n", result);
 		return (0);
-
 	}
-
 }
