@@ -13,22 +13,20 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-
+	void *c;
 	unsigned int x;
-	char *y;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	x = 0;
-	y = malloc(nmemb * size);
+	c = malloc(nmemb * size);
 
-	if (x == NULL)
+	if (c == NULL)
 		return (NULL);
 
-	for (; x < nmemb * size; x++)
-		*(y + x) = 0;
+	for (x = 0; x < (nmemb * size); x++)
+		*((char *)(c) + x) = 0;
 
-	return (y);
+	return (c);
 
 }
