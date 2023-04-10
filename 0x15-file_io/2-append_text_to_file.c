@@ -7,28 +7,31 @@
  * @text_content: string to add to the end of the file.
  * Return: If fails or filename is NULL - -1.
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int x, y, z;
+	int fd, n, noX;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	fd = open(filename, O_WRONLY | O_APPEND);
+
+	if (fd == -1)
+		return (-1);
+
+	if (text_content)
 	{
-		for (z = 0; text_content[z];)
-			z++;
+		for (n = 0; text_content[n];
+			       	n++);
+
+		noX = write(fd, text_content, n);
+
+		if (noX == -1)
+			return (-1);
 	}
 
-	z = 0;
-	x = open(filename, O_WRONLY | O_APPEND);
-	y = write(x, text_content, z);
-
-	if (x == -1 || y == -1)
-		return (-1);
-
-	close(x);
+	close(fd);
 
 	return (1);
 }
-
