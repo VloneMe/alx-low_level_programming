@@ -10,28 +10,28 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, n, noX;
+	int fdx, fdy, lenX = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_APPEND);
-
-	if (fd == -1)
+	fdx = open(filename, O_RDWR | O_APPEND);
+	if (fdx < 0)
 		return (-1);
 
-	if (text_content)
+	if (text_content == NULL)
 	{
-		for (n = 0; text_content[n];
-			       	n++);
-
-		noX = write(fd, text_content, n);
-
-		if (noX == -1)
-			return (-1);
+		close(fdx);
+		return (1);
 	}
 
-	close(fd);
+	while (*(text_content + lenX))
+		lenX++;
+
+	fdy = write(fdx, text_content, lenX);
+	close(fdx);
+	if (fdy < 0)
+		return (-1);
 
 	return (1);
 }
