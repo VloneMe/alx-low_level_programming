@@ -9,25 +9,25 @@
 
 void print_binary(unsigned long int n)
 {
+	unsigned int i, maxNum = 32768;
 
-	int num, num_count = 0;
-	unsigned long int curnt_num;
-
-	num = 63;
-	for (; num >= 0; n--)
+	if (n == 0)
 	{
-		curnt_num = n >> num;
-
-		if (curnt_num & 1)
-		{
-			_putchar('1');
-			num_count++;
-		}
-		else if (num_count)
-			_putchar('0');
+		_putchar('0');
+		return;
 	}
 
-	if (!num_count)
-		_putchar('0');
+	i = 0;
+	while (maxNum)
+	{
+		if (i == 1 && (n & maxNum) == 0)
+			_putchar('0');
+		else if ((n & maxNum) != 0)
+		{
+			_putchar('1');
+			i = 1;
+		}
 
+		maxNum >>= 1;
+	}
 }
