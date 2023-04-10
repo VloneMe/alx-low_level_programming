@@ -5,19 +5,20 @@
  * @m: number to set other equal
  * Return: number of fliped bits
  */
+
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int numflips = 0;
-	unsigned long int x, maxNum;
+	int num, countNum = 0;
+	unsigned long int currentNum;
+	unsigned long int exNum = n ^ m;
 
-	x = (n ^ m);
-	maxNum = 0x01;
-	while (maxNum <= x)
+	for (num = 63; num >= 0; num--)
 	{
-		if (maxNum & x)
-			numflips++;
-		maxNum <<= 1;
+		currentNum = exNum >> num;
+		if (currentNum & 1)
+			countNum++;
 	}
 
-	return (numflips);
+	return (countNum);
 }
+
