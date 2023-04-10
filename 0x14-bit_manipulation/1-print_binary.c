@@ -10,13 +10,13 @@
 void print_binary(unsigned long int n)
 {
 
-	int n, num_count = 0;
+	int num, num_count = 0;
 	unsigned long int curnt_num;
 
-	n = 63;
-	for (; n >= 0; n--)
+	num = 63;
+	for (; num >= 0; n--)
 	{
-		curnt_num = n >> i;
+		curnt_num = n >> num;
 
 		if (curnt_num & 1)
 		{
