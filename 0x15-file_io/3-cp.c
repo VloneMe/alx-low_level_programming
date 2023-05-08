@@ -86,10 +86,8 @@ int main(int argc, char *argv[])
 		X_to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (x > 0);
-
 	free(buf);
 	close_file(x_from);
 	close_file(X_to);
-
 	return (0);
 }
