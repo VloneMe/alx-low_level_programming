@@ -1,14 +1,14 @@
 /**
  * _strlen - A function that finds the length of the string
  *
- * @str: The input string
+ * @s: The input string
  * Return: The length of the string
  */
-unsigned int _strlen(char *str)
+unsigned int _strlen(char *s)
 {
 	unsigned int length = 0;
 
-	while (str[length])
+	while (s[length])
 		length++;
 
 	return (length);
