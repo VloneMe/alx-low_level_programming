@@ -1,0 +1,8 @@
+# Variables
+CC = gcc
+SRC = main.c school.c
+
+# The rule compiles the main program called school.
+
+all: $(SRC)
+	$(CC) $(SRC) -o school
