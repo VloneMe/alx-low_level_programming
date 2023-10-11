@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * advanced_binary_recursive - This recursive function for advanced binary search.
+ * advanced_binary_recursive - This recursive function
+ * for advanced binary search.
  *
  * @array: Pointer to the first element of the sorted array to search in.
  * @low: The lowest index of the current search range.
@@ -30,14 +31,18 @@ int advanced_binary_recursive(int *array, int low, int high, int value)
 		if (array[mid] == value)
 		{
 			if (mid == low || array[mid - 1] != value)
-				return mid;
+				return (mid);
 			else
 				return (advanced_binary_recursive(array, low, mid - 1, value));
 		}
 		else if (array[mid] < value)
+		{
 			return (advanced_binary_recursive(array, mid + 1, high, value));
+		}
 		else
-    			return (advanced_binary_recursive(array, low, mid - 1, value));
+		{
+			return (advanced_binary_recursive(array, low, mid - 1, value));
+		}
 	}
 
 	return (-1);
